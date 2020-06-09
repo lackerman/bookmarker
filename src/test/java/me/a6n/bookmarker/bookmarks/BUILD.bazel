@@ -1,0 +1,10 @@
+load('//src/bazel:junit5.bzl', 'java_junit5_test')
+
+java_junit5_test(
+    name = 'bookmarks_lib_tests',
+    srcs = glob(['*.java']),
+    test_package = 'me.a6n.bookmarker.bookmarks',
+    deps = [
+        '//src/main/java/me/a6n/bookmarker/bookmarks:bookmarks_lib',
+    ],
+)

@@ -1,0 +1,11 @@
+java_library(
+    visibility = ["//visibility:public"],
+    name = "bookmarks_lib",
+    srcs = glob(["*.java"]),
+    deps = [
+      "@maven//:javax_ws_rs_javax_ws_rs_api",
+      "@maven//:javax_inject_javax_inject",
+      "//:dagger_lib",
+      "//:lombok_lib",
+    ],
+)

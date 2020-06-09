@@ -1,0 +1,5 @@
+filegroup(
+    name = "bazel_resources",
+    srcs = glob(["*.bzl"]),
+    visibility = ['//visibility:public']
+)

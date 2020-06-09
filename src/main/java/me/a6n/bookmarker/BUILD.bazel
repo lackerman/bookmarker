@@ -1,0 +1,19 @@
+java_binary(
+    name = "bookmarker",
+    srcs = glob(["**/*.java"]),
+    resource_strip_prefix = "src/main/resources",
+    resources = [
+      "//src/main/resources:bookmarker_resources",
+    ],
+    deps = [
+      "//src/main/java/me/a6n/bookmarker/bookmarks:bookmarks_lib",
+      "@maven//:io_dropwizard_dropwizard_core",
+      "@maven//:io_dropwizard_dropwizard_configuration",
+      "@maven//:org_apache_commons_commons_text",
+      "@maven//:javax_validation_validation_api",
+      "@maven//:javax_inject_javax_inject",
+      "//:dagger_lib",
+      "//:lombok_lib",
+    ],
+    main_class = "me.a6n.bookmarker.App",
+)

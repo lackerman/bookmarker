@@ -1,0 +1,9 @@
+logging:
+  level: INFO
+  loggers:
+    me.a6n.bookmarker: DEBUG
+
+bookmarks:
+  tags:
+    - ${PREFIX}_dev
+    - ${PREFIX}_news
